@@ -1,5 +1,6 @@
 # configure.ac -- Backtrace configure script.
 # Copyright (C) 2012-2018 Free Software Foundation, Inc.
+# Copyright (C) Mellanox Technologies Ltd. 2018.  ALL RIGHTS RESERVED.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -34,6 +35,13 @@ AC_INIT(package-unused, version-unused,, libbacktrace)
 AC_CONFIG_SRCDIR(backtrace.h)
 AC_CONFIG_HEADER(config.h)
 AC_CONFIG_MACRO_DIR(config)
+
+
+#
+# Configure modules
+#
+m4_include([config/m4/multi.m4])
+m4_include([config/m4/libtool.m4])
 
 # with_target_subdir is used when configured as part of a GCC tree.
 if test -n "${with_target_subdir}"; then
