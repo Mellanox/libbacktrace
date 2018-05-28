@@ -1,5 +1,6 @@
 # Makefile.am -- Backtrace Makefile.
 # Copyright (C) 2012-2018 Free Software Foundation, Inc.
+# Copyright (C) Mellanox Technologies Ltd. 2018.  ALL RIGHTS RESERVED.
 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -33,7 +34,10 @@ ACLOCAL_AMFLAGS = -I config
 
 AM_CFLAGS = $(EXTRA_FLAGS) $(WARN_FLAGS) $(PIC_FLAG)
 
+EXTRA_DIST = edtest2.c move-if-change filetype.awk
+
 include_HEADERS = backtrace.h backtrace-supported.h
+noinst_HEADERS  = filenames.h testlib.h
 
 lib_LTLIBRARIES = libbacktrace.la
 
