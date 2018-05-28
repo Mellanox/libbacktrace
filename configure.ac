@@ -65,7 +65,7 @@ AC_SUBST(libtool_VERSION)
 # -Wall: Issue all automake warnings.
 # -Wno-portability: Don't warn about constructs supported by GNU make.
 #    (because GCC requires GNU make anyhow).
-AM_INIT_AUTOMAKE([1.11.1 foreign no-dist no-define no-dependencies -Wall -Wno-portability])
+AM_INIT_AUTOMAKE([1.11.1 foreign no-define no-dependencies -Wall -Wno-portability])
 
 AM_MAINTAINER_MODE
 
